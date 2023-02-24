@@ -37,8 +37,52 @@ export const OptionsContainer = styled.div`
     flex-direction: column;
     & > div{
         padding: 10px;
-        input[type="checkbox"]{
-            cursor: pointer;
+        label.switch{
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 22.67px;
+            margin-left: 5px;
+            input { 
+                opacity: 0;
+                width: 0;
+                height: 0;
+                &:checked + .slider {
+                    background-color: #2196F3;
+                }
+                &:focus + .slider {
+                    box-shadow: 0 0 1px #2196F3;
+                }
+                &:checked + .slider:before {
+                    -webkit-transform: translateX(17.33px);
+                    -ms-transform: translateX(17.33px);
+                    transform: translateX(17.33px);
+                }
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 34px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 17.33px;
+                    width: 17.33px;
+                    left: 2.67px;
+                    bottom: 2.67px;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    border-radius: 50%;
+                }
+            }
         }
         &.divisor{
             padding: 0px;

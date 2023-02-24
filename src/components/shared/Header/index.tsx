@@ -28,7 +28,10 @@ export default function Header(props: HeaderProps) {
                         <OptionsContainer>
                             <div>
                                 Dark Mode:
-                                <input type="checkbox" name="darkMode" id="darkMode" onClick={() => setDarkMode(!darkMode)} />
+                                <label className="switch">
+                                    <input type="checkbox" name="darkMode" id="darkMode" onClick={() => setDarkMode(!darkMode)} />
+                                    <span className="slider round"></span>
+                                </label>
                             </div>
                             <div className="divisor"></div>
                             <div>
