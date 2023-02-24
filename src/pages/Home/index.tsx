@@ -2,10 +2,10 @@ import { ConfigContext } from "../../components/shared/Header"
 import { useContext } from 'react'
 import { HomeContainer, ListContainer, ListCard } from './styles'
 import data from '../../data/home.json'
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const configContext = useContext(ConfigContext)
-    console.log(data)
     return (
         <HomeContainer>
             <h1>
@@ -19,9 +19,11 @@ export default function Home() {
                                 <h3>
                                     {configContext.language == "PT/BR" ? `${category.pt_title}` : `${category.en_title}`}
                                 </h3>
-                                <span>
-                                    {configContext.language == "PT/BR" ? "Ver todos" : "See all"}
-                                </span>
+                                <Link to={`/${category.id}`}>
+                                    <span>
+                                        {configContext.language == "PT/BR" ? "Ver todos" : "See all"}
+                                    </span>
+                                </Link>
                             </div>
                             <div className="content">
                                 {
