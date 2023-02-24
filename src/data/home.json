@@ -10,7 +10,7 @@
                 "en_title": "Linked list",
                 "pt_description": "Aprenda o que é e como usar a linked list",
                 "en_description": "Learn what it is and how to use the linked list",
-                "link": "#"
+                "link": "data-structure/linked-list"
             },
             {
                 "id": "double-linked-list",
@@ -18,7 +18,7 @@
                 "en_title": "Double Linked list",
                 "pt_description": "Aprenda o que é e como usar a double linked list",
                 "en_description": "Learn what it is and how to use the double linked list",
-                "link": "#"
+                "link": "data-structure/double-linked-list"
             },
             {
                 "id": "queue",
@@ -26,7 +26,7 @@
                 "en_title": "Queue",
                 "pt_description": "Aprenda o que é e como usar a fila",
                 "en_description": "Learn what it is and how to use the Queue",
-                "link": "#"
+                "link": "data-structure/queue"
             },
             {
                 "id": "stack",
@@ -34,7 +34,7 @@
                 "en_title": "Stack",
                 "pt_description": "Aprenda o que é e como usar a pilha",
                 "en_description": "Learn what it is and how to use the stack",
-                "link": "#"
+                "link": "data-structure/stack"
             }
         ]
     },
@@ -49,7 +49,7 @@
                 "en_title": "String",
                 "pt_description": "Aprenda alguns algoritimos para string",
                 "en_description": "Learn some string algorithms",
-                "link": "#"
+                "link": "algorithms/string"
             },
             {
                 "id": "array",
@@ -57,7 +57,7 @@
                 "en_title": "Array",
                 "pt_description": "Aprenda alguns algoritimos para array",
                 "en_description": "Learn some array algorithms",
-                "link": "#"
+                "link": "algorithms/array"
             },
             {
                 "id": "matrix",
@@ -65,7 +65,7 @@
                 "en_title": "Matrix",
                 "pt_description": "Aprenda alguns algoritimos para matriz",
                 "en_description": "Learn some matrix algorithms",
-                "link": "#"
+                "link": "algorithms/matrix"
             },
             {
                 "id": "math",
@@ -73,7 +73,7 @@
                 "en_title": "Math",
                 "pt_description": "Aprenda alguns algoritimos matemáticos",
                 "en_description": "Learn some mathematical algorithms",
-                "link": "#"
+                "link": "algorithms/math"
             }
         ]
     }

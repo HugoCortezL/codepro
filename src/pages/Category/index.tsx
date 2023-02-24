@@ -1,7 +1,7 @@
 import { ConfigContext } from "../../components/shared/Header"
 import { useContext, useState, useEffect } from 'react'
 import { CategoryContainer, ListContainer, ListCard } from './styles'
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import data from "../../data/home.json"
 
 interface DataInterface {
@@ -46,6 +46,12 @@ export default function Category() {
         )
     }
 
+    const topicClick = (link: string) => {
+        return (
+            <Navigate to={link} replace={true} />
+        )
+    }
+
     return (
         <CategoryContainer>
             <h1>
@@ -67,9 +73,11 @@ export default function Category() {
                                 <div className="options">
                                     <div className="divisor"></div>
                                     <div className="button">
-                                        <button>
-                                            {configContext.language == "PT/BR" ? "Visualizar" : "See"}
-                                        </button>
+                                        <Link to={`/${topic.link}`}>
+                                            <button>
+                                                {configContext.language == "PT/BR" ? "Visualizar" : "See"}
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </ListCard>

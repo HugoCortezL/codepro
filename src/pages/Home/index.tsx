@@ -41,9 +41,11 @@ export default function Home() {
                                                 <div className="options">
                                                     <div className="divisor"></div>
                                                     <div className="button">
+                                                    <Link to={`/${topic.link}`}>
                                                         <button>
                                                             {configContext.language == "PT/BR" ? "Visualizar" : "See"}
                                                         </button>
+                                                    </Link>
                                                     </div>
                                                 </div>
                                             </ListCard>
