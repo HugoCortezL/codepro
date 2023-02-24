@@ -1,7 +1,7 @@
 import { ConfigContext } from "../../components/shared/Header"
 import { useContext, useState, useEffect } from 'react'
 import { CategoryContainer, ListContainer, ListCard } from './styles'
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../data/home.json"
 
 interface DataInterface {
@@ -21,7 +21,19 @@ interface DataInterface {
 export default function Category() {
     const configContext = useContext(ConfigContext)
     const category = useParams().category
-    const [categoryData, setCategoryData] = useState<DataInterface | null>(null)
+    const [categoryData, setCategoryData] = useState<DataInterface | null>({
+        id: "",
+        pt_title: "",
+        en_title: "",
+        data: [{
+            id: "",
+            pt_title: "",
+            en_title: "",
+            pt_description: "",
+            en_description: "",
+            link: "",
+        }]
+    })
 
     useEffect(() => {
         const finalData = data.find(item => item.id == category)
@@ -30,9 +42,7 @@ export default function Category() {
 
     if (!categoryData) {
         return (
-            <h1>
-                404 NOT FOUND
-            </h1>
+            <Navigate to="/" replace={true} />
         )
     }
 
