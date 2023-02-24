@@ -14,7 +14,7 @@ export default function Header(props: HeaderProps) {
 
     return (
         <ConfigContext.Provider value={{ language: language, darkMode: darkMode }}>
-            <HeaderContainer>
+            <HeaderContainer darkMode={darkMode}>
                 <h1>Code Pro</h1>
                 <div className="options">
                     <span className="click" onClick={() => setOpenOptions(!openOptions)}>
@@ -25,7 +25,7 @@ export default function Header(props: HeaderProps) {
                     </span>
                     {
                         openOptions &&
-                        <OptionsContainer>
+                        <OptionsContainer darkMode={darkMode}>
                             <div>
                                 Dark Mode:
                                 <label className="switch">
@@ -52,7 +52,6 @@ export default function Header(props: HeaderProps) {
                 </div>
             </HeaderContainer>
             <ContentContainer>
-
                 {props.children}
             </ContentContainer>
         </ConfigContext.Provider>

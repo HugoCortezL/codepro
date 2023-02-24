@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div`
+interface darkModeProp {
+    darkMode: boolean
+}
+export const HeaderContainer = styled.div<darkModeProp>`
     width: 100vw;
     height: 60px;
-    background-color: #FAFBFC;
+    background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
     box-shadow: 0px 2px 4px #BBAAFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+    color: ${props => props.darkMode ? "#FAFBFC" : "#464646"};
     h1{
-        color: #5E36FF;
+        color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
     }
     .options {
         position: relative;
@@ -24,10 +28,10 @@ export const HeaderContainer = styled.div`
     }
 `
 
-export const OptionsContainer = styled.div`
+export const OptionsContainer = styled.div<darkModeProp>`
     height: 123px;
     width: 167px;
-    background-color: #FAFBFC;
+    background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
     box-shadow: 0px 0px 4px #C2C2C2;
     border-radius: 5px;
     position: absolute;
@@ -48,10 +52,10 @@ export const OptionsContainer = styled.div`
                 width: 0;
                 height: 0;
                 &:checked + .slider {
-                    background-color: #2196F3;
+                    background-color: #BF5EFF;
                 }
                 &:focus + .slider {
-                    box-shadow: 0 0 1px #2196F3;
+                    box-shadow: 0 0 1px #BF5EFF;
                 }
                 &:checked + .slider:before {
                     -webkit-transform: translateX(17.33px);
@@ -66,7 +70,7 @@ export const OptionsContainer = styled.div`
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: #ccc;
+                background-color: #E6E6E6;
                 -webkit-transition: .4s;
                 transition: .4s;
                 border-radius: 34px;
@@ -88,7 +92,7 @@ export const OptionsContainer = styled.div`
             padding: 0px;
             width: 100%;
             height: 2px;
-            background-color: #E6E6E6;
+            background-color: ${props => props.darkMode ? "#5B5B5B" : "#E6E6E6"};
         }
         div.language-buttons{
             display: flex;
@@ -97,14 +101,14 @@ export const OptionsContainer = styled.div`
             margin-top: 5px;
             button{
                 padding: 5px 14px;
-                background-color: #FAFBFC;
-                border: 1px solid #5E36FF;
+                background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
+                border: 1px solid ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
                 border-radius: 5px;
-                color: #5E36FF;
+                color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
                 cursor: pointer;
                 &.active{
-                    background-color: #5E36FF;
-                    color: #FAFBFC;
+                    background-color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
+                    color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
                 }
             }
         }
