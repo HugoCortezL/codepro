@@ -15,7 +15,7 @@
                     "codes": [
                         {
                             "id": "node",
-                            "text":"class Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                            "text":"class Node { \n\n \t constructor(data) { \n \t\t this.data = data \n \t\t this.next = null \n \t } \n\n }"
                         },
                         {
                             "id": "list",
@@ -28,11 +28,11 @@
                     "codes": [
                         {
                             "id": "node",
-                            "text":"public class Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                            "text":"private class Node { \n \t int data; \n \t Node next; \n\n\t public Node(int data) { \n\t\t this.data = data; \n\t\t this.next = null; \n\t } \n }"
                         },
                         {
                             "id": "list",
-                            "text":"public class LinkedList { \n\n \t constructor() { \n \t\t this.head = null \n \t } \n\n }"
+                            "text":"class LinkedList { \n \t Node head; \n }"
                         }
                     ]
                 },
@@ -41,11 +41,11 @@
                     "codes": [
                         {
                             "id": "node",
-                            "text":"def Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                            "text":"def Node: \n\n \t def __init__(self, data): \n \t\t self.data = data \n \t\t self.next = None \n\n"
                         },
                         {
                             "id": "list",
-                            "text":"def LinkedList { \n\n \t constructor() { \n \t\t this.head = null \n \t } \n\n }"
+                            "text":"def LinkedList: \n\n \t def __init__(self): \n \t\t self.head = None \n\n"
                         }
                     ]
                 }
@@ -217,51 +217,6 @@
             {
                 "id": "operation-pop_front",
                 "title": "popFront",
-                "link": "#"
-            },
-            {
-                "id": "operation-pop_back",
-                "title": "popBack",
-                "link": "#"
-            },
-            {
-                "id": "operation-insert",
-                "title": "insert",
-                "link": "#"
-            },
-            {
-                "id": "operation-size",
-                "title": "size",
-                "link": "#"
-            },
-            {
-                "id": "operation-empty",
-                "title": "empty",
-                "link": "#"
-            },
-            {
-                "id": "operation-value_at",
-                "title": "valueAt",
-                "link": "#"
-            },
-            {
-                "id": "operation-push_front",
-                "title": "pushFront",
-                "link": "#"
-            },
-            {
-                "id": "operation-push_back",
-                "title": "pushBack",
-                "link": "#"
-            },
-            {
-                "id": "operation-pop_front",
-                "title": "popFront",
-                "link": "#"
-            },
-            {
-                "id": "operation-pop_back",
-                "title": "popBack",
                 "link": "#"
             },
             {
