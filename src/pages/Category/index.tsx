@@ -53,7 +53,7 @@ export default function Category() {
     }
 
     return (
-        <CategoryContainer>
+        <CategoryContainer darkMode={configContext.darkMode}>
             <h1>
                 {configContext.language == "PT/BR" ? `${categoryData.pt_title}` : `${categoryData.en_title}`}
             </h1>
@@ -61,7 +61,7 @@ export default function Category() {
                 {
                     categoryData.data.map(topic => {
                         return (
-                            <ListCard key={topic.id}>
+                            <ListCard key={topic.id} darkMode={configContext.darkMode}>
                                 <div className="text">
                                     <h4>
                                         {configContext.language == "PT/BR" ? `${topic.pt_title}` : `${topic.en_title}`}

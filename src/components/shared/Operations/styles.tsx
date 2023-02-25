@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 interface OperationContainerProps {
     width: string;
+    darkMode: boolean
 }
+
 export const OperationContainer = styled.div<OperationContainerProps>`
     width: 100%;
+    h2{
+        color: ${props => props.darkMode ? "#FAFBFC" : "#464646"};
+        transition: color 0.4s;
+    }
     div.options{
         margin-top: 10px;
         height: 96px;
@@ -18,13 +24,15 @@ export const OperationContainer = styled.div<OperationContainerProps>`
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #B70569;
+            background: ${props => props.darkMode ? "#4e47db" : "#B70569"};
             border-radius: 3px;
             cursor: pointer;
+            transition: background-color 0.4s;
         }
-
+        
         ::-webkit-scrollbar-thumb:hover {
-            background: #960457;
+            background: ${props => props.darkMode ? "#3e38b0" : "#960457"};
+            transition: background-color 0.4s;
         }
         .container {
             display: flex;
@@ -35,17 +43,17 @@ export const OperationContainer = styled.div<OperationContainerProps>`
             button{
                 width: 100px;
                 height: 38px;
-                background-color: #FAFBFC;
-                border: 1px solid #5E36FF;
-                color: #5E36FF;
+                background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
+                border: 1px solid ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
+                color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
                 padding: 10px 0;
                 border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
+                transition: color 0.4s, border 0.4s, background-color 0.4s;
                 &:hover{
                     border: 1px solid transparent;
-                    background-color: #5E36FF;
-                    color: #FAFBFC;
-                    transition: background-color 0.3s, color 0.3s;
+                    background-color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
+                    color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
+                    transition: color 0.4s, border 0.4s, background-color 0.4s;
                 }
             }
         }

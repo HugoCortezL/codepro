@@ -14,13 +14,13 @@ interface OperationProps {
 export default function Operation(props: OperationProps) {
     const configContext = useContext(ConfigContext)
     let width;
-    if(props.data.length % 2 == 0){
+    if (props.data.length % 2 == 0) {
         width = props.data.length * 55.0
-    }else{
+    } else {
         width = (props.data.length * 55.0) + 50
     }
     return (
-        <OperationContainer width={`${width}px`}>
+        <OperationContainer width={`${width}px`} darkMode={configContext.darkMode}>
             <h2>
                 {configContext.language == "PT/BR" ? "Operações" : "Operations"}
             </h2>

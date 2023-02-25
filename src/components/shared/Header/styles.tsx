@@ -7,14 +7,16 @@ export const HeaderContainer = styled.div<darkModeProp>`
     width: 100vw;
     height: 60px;
     background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
-    box-shadow: 0px 2px 4px #BBAAFF;
+    border-bottom: 1px solid ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     color: ${props => props.darkMode ? "#FAFBFC" : "#464646"};
+    transition: color 0.4s, background-color 0.4s, border-bottom 0.4s;
     h1{
         color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
+        transition: color 0.4s;
     }
     .options {
         position: relative;
@@ -39,6 +41,7 @@ export const OptionsContainer = styled.div<darkModeProp>`
     right: 0px;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.4s;
     & > div{
         padding: 10px;
         label.switch{
@@ -93,6 +96,7 @@ export const OptionsContainer = styled.div<darkModeProp>`
             width: 100%;
             height: 2px;
             background-color: ${props => props.darkMode ? "#5B5B5B" : "#E6E6E6"};
+            transition: background-color 0.4s;
         }
         div.language-buttons{
             display: flex;
@@ -105,6 +109,7 @@ export const OptionsContainer = styled.div<darkModeProp>`
                 border: 1px solid ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
                 border-radius: 5px;
                 color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
+                transition: color 0.4s, background-color 0.4s, border 0.4s;
                 cursor: pointer;
                 &.active{
                     background-color: ${props => props.darkMode ? "#BF5EFF" : "#5E36FF"};
@@ -115,7 +120,14 @@ export const OptionsContainer = styled.div<darkModeProp>`
     }
 `
 
-export const ContentContainer = styled.div`
-    width: 60vw;
-    margin: 15px auto;
+export const ContentContainer = styled.div<darkModeProp>`
+    display: flex;
+    justify-content: center;
+    background-color: ${props => props.darkMode ? "#464646" : "#FAFBFC"};
+    min-height: calc(100vh - 60px);
+    transition: background-color 0.4s;
+    div.children-content{
+        width: 60vw;
+        padding: 15px 0;
+    }
 `

@@ -15,7 +15,7 @@ export default function Faq(props: FaqProps) {
     const configContext = useContext(ConfigContext)
 
     return (
-        <FaqContainer >
+        <FaqContainer darkMode={configContext.darkMode}>
             <h2>
                 {configContext.language == "PT/BR" ? "Perguntas Frequentes em intrevistas" : "Interview FAQ"}
             </h2>
@@ -23,7 +23,7 @@ export default function Faq(props: FaqProps) {
                 {
                     props.data.map(item => {
                         return (
-                            <FaqCard key={item.id}>
+                            <FaqCard key={item.id} darkMode={configContext.darkMode}>
                                 <summary>
                                     {item.question}
                                 </summary>

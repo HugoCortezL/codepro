@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 export default function Home() {
     const configContext = useContext(ConfigContext)
     return (
-        <HomeContainer>
+        <HomeContainer darkMode={configContext.darkMode}>
             <h1>
                 {configContext.language == "PT/BR" ? "Preparação" : "Preparation"}
             </h1>
             {
                 data.map(category => {
                     return (
-                        <ListContainer key={category.id}>
+                        <ListContainer key={category.id} darkMode={configContext.darkMode}>
                             <div className="title">
                                 <h3>
                                     {configContext.language == "PT/BR" ? `${category.pt_title}` : `${category.en_title}`}
@@ -29,7 +29,7 @@ export default function Home() {
                                 {
                                     category.data.map(topic => {
                                         return (
-                                            <ListCard key={topic.id}>
+                                            <ListCard key={topic.id} darkMode={configContext.darkMode}>
                                                 <div className="text">
                                                     <h4>
                                                         {configContext.language == "PT/BR" ? `${topic.pt_title}` : `${topic.en_title}`}

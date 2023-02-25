@@ -22,11 +22,11 @@ export default function DataStructure() {
     }
 
     return (
-        <DataStructureContainer>
+        <DataStructureContainer darkMode={configContext.darkMode}>
             <h1>
                 {configContext.language == "PT/BR" ? `${topicData.pt_title}` : `${topicData.en_title}`}
             </h1>
-            <DescriptionContainer>
+            <DescriptionContainer darkMode={configContext.darkMode}>
                 {configContext.language == "PT/BR" ?
                     <p>
                         <strong>Descrição</strong>
@@ -42,7 +42,7 @@ export default function DataStructure() {
                 <img src={configContext.darkMode ? topicData.white_image : topicData.black_image} alt="" />
             </div>
             <Code data={topicData.code} />
-            <ExplicationContainer>
+            <ExplicationContainer darkMode={configContext.darkMode}>
                 <h2>
                     {configContext.language == "PT/BR" ? "Explicação" : "Explication"}
                 </h2>

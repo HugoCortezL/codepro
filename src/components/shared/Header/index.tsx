@@ -51,8 +51,10 @@ export default function Header(props: HeaderProps) {
                     }
                 </div>
             </HeaderContainer>
-            <ContentContainer>
-                {props.children}
+            <ContentContainer darkMode={darkMode}>
+                <div className="children-content">
+                    {props.children}
+                </div>
             </ContentContainer>
         </ConfigContext.Provider>
     )
