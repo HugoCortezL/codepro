@@ -1,0 +1,274 @@
+[
+    {
+        "id": "linked-list",
+        "pt_title": "Linked List",
+        "en_title": "Linked List",
+        "pt_description": "Uma linked list é uma estrutura de dados linear, em que, diferentemente de um array, os elementos nao sao armazenados continuamente. Consiste basicamente em uma cadeia de nós, onde cada nó contém informações como o dado e o ponteiro para o proximo nó da cadeia.",
+        "en_description": "A linked list is a linear data structure, in which, unlike an array, the elements are not stored continuously. It basically consists of a chain of nodes, where each node contains information such as data and a pointer to the next node in the chain.",
+        "black_image": "../src/images/linked-list-black-image.svg",
+        "white_image": "../src/images/linked-list-white-image.svg",
+        "code": {
+            "languages": ["Javascript", "Java", "Python"],
+            "codes": [
+                {
+                    "id": "Javascript",
+                    "codes": [
+                        {
+                            "id": "node",
+                            "text":"class Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                        },
+                        {
+                            "id": "list",
+                            "text":"class LinkedList { \n \n \t constructor() { \n \t\t this.head = null \n \t } \n\n }"
+                        }
+                    ]
+                },
+                {
+                    "id": "Java",
+                    "codes": [
+                        {
+                            "id": "node",
+                            "text":"public class Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                        },
+                        {
+                            "id": "list",
+                            "text":"public class LinkedList { \n\n \t constructor() { \n \t\t this.head = null \n \t } \n\n }"
+                        }
+                    ]
+                },
+                {
+                    "id": "Python",
+                    "codes": [
+                        {
+                            "id": "node",
+                            "text":"def Node { \n\n \t constructor(value) { \n \t\t this.data = value \n \t\t this.next = null \n \t } \n\n }"
+                        },
+                        {
+                            "id": "list",
+                            "text":"def LinkedList { \n\n \t constructor() { \n \t\t this.head = null \n \t } \n\n }"
+                        }
+                    ]
+                }
+            ]
+        },
+        "pt_explication": [
+            {
+                "id": "pt_explication-1",
+                "text": "Na linked list existe apenas um atributo que será o head, onde ele aponta para o primeiro nó da lista."
+            },
+            {
+                "id": "pt_explication-2",
+                "text": "Além do head, podemos adicionar a linked list atributos como: tail, que aponta para o ultimo nó da fila; size, que armazena o tamanho da lista."
+            }
+        ],
+        "en_explication": [
+            {
+                "id": "en_explication-1",
+                "text": "In the linked list there is only one attribute which will be the head, where it points to the first node in the list."
+            },
+            {
+                "id": "en_explication-2",
+                "text": "In addition to head, we can add attributes such as: tail to the linked list, which points to the last node in the queue; size, which stores the size of the list."
+            }
+        ],
+        "pt_advantages": [
+            {
+                "id": "pt_advantages-1",
+                "title": "Estrutura de dados dinâmica",
+                "text": "o tamanho da memória pode ser alocado ou desalocado em tempo de execução com base na inserção ou exclusão da operação."
+            },
+            {
+                "id": "pt_advantages-2",
+                "title": "Fácil inserção e exclusão",
+                "text": "a inserção e exclusão de elementos são mais simples do que em arrays, pois nenhum elemento precisa ser deslocado após a inserção ou exclusão, apenas o endereço precisa ser atualizado."
+            },
+            {
+                "id": "pt_advantages-3",
+                "title": "Utilização eficiente da memória",
+                "text": "como sabemos, a linked list é uma estrutura de dados dinâmica que aumenta ou diminui de tamanho conforme a necessidade, evitando assim o desperdício de memória."
+            },
+            {
+                "id": "pt_advantages-4",
+                "title": "Implementação",
+                "text": "várias outras estruturas de dados podem ser implementadas usando uma linked list, como pilha, fila, grafo, hash map, etc."
+            }
+        ],
+        "en_advantages": [
+            {
+                "id": "pt_advantages-1",
+                "title": "Dynamic Data structure",
+                "text": "The size of memory can be allocated or de-allocated at run time based on the operation insertion or deletion."
+            },
+            {
+                "id": "pt_advantages-2",
+                "title": "Ease of Insertion/Deletion",
+                "text": "The insertion and deletion of elements are simpler than arrays since no elements need to be shifted after insertion and deletion, Just the address needed to be updated."
+            },
+            {
+                "id": "pt_advantages-3",
+                "title": "Efficient Memory Utilization",
+                "text": "As we know Linked List is a dynamic data structure the size increases or decreases as per the requirement so this avoids the wastage of memory."
+            },
+            {
+                "id": "pt_advantages-4",
+                "title": "Implementation",
+                "text": "Various advanced data structures can be implemented using a linked list like a stack, queue, graph, hash maps, etc."
+            }
+        ],
+        "pt_disadvantages": [
+            {
+                "id": "pt_disadvantages-1",
+                "title": "Uso de memória",
+                "text": "o uso de ponteiros é maior em linked lists, portanto, mais complexo e requer mais memória."
+            },
+            {
+                "id": "pt_disadvantages-2",
+                "title": "Acessando um nó",
+                "text": "o acesso aleatório não é possível devido à alocação dinâmica de memória."
+            },
+            {
+                "id": "pt_disadvantages-3",
+                "title": "Operação de busca cara",
+                "text": "a busca por um elemento é cara e requer complexidade de tempo O(n)."
+            }
+        ],
+        "en_disadvantages": [
+            {
+                "id": "en_disadvantages-1",
+                "title": "Memory usage",
+                "text": "The use of pointers is more in linked lists hence, complex and requires more memory."
+            },
+            {
+                "id": "en_disadvantages-2",
+                "title": "Accessing a node",
+                "text": "Random access is not possible due to dynamic memory allocation."
+            },
+            {
+                "id": "en_disadvantages-3",
+                "title": "Search operation costly",
+                "text": "Searching for an element is costly and requires O(n) time complexity."
+            }
+        ],
+        "pt_faq": [
+            {
+                "id": "pt_faq-1",
+                "question": "O que é uma linked list ?",
+                "answer": "Linked list é mais comumente usada para lidar com elementos de dados dinâmicos. A lista vinculada consiste em nós e um nó consiste em dois campos, um para armazenar dados e outro para manter a referência do próximo nó."
+            },
+            {
+                "id": "pt_faq-2",
+                "question": "Para que usamos a linked list ?",
+                "answer": "A lista encadeada é uma estrutura de dados linear que armazena dados em nós. esses nós contêm os dados e uma referência ao próximo nó da lista. Os vinculados são muito eficientes em adicionar e remover nós devido à sua estrutura simples."
+            },
+            {
+                "id": "pt_faq-3",
+                "question": "Qual a diferença entre array e linked list ?",
+                "answer": "• Arrays são estruturas de dados contendo elementos de dados semelhantes, enquanto listas encadeadas são estruturas de dados não primitivas contendo elementos encadeados não ordenados.\n• Em uma matriz, os elementos são indexados, mas em uma lista vinculada, os nós não são indexados.\n• O acesso a um array de elementos é rápido se soubermos a posição de um elemento no array, enquanto na lista vinculada leva um tempo linear, portanto, a lista vinculada é um pouco mais lenta.\n• Operações como inserção e exclusão em arrays levam muito tempo. Visto que o desempenho dessas operações é mais rápido em listas vinculadas.\n• As matrizes são de tamanho fixo e seu tamanho é estático, mas as listas encadeadas são dinâmicas e flexíveis e podem expandir e reduzir seu tamanho."
+            }
+        ],
+        "en_faq": [
+            {
+                "id": "en_faq-1",
+                "question": "What is a linked list ?",
+                "answer": "Linked list are most commonly used to handle dynamic data elements. Linked list consists of nodes and a node consists of two fields one for storing data and other for keeping the reference of next node."
+            },
+            {
+                "id": "en_faq-2",
+                "question": "What are linked lists used for ?",
+                "answer": "The linked list is a linear data structure that stores data in nodes. these nodes hold both the data and a reference to the next node in the list. Linked are very efficient at adding and removing nodes because of their simple structure."
+            },
+            {
+                "id": "en_faq-3",
+                "question": "What is the difference between array and linked list ?",
+                "answer": "• Arrays are data structures containing similar data elements, whereas linked lists are non-primitive data structures containing unordered linked elements.\n• In an array, elements are indexed, but in a linked list nodes are not indexed.\n• Accessing an element array is fast if we know the position of an element in the array, while in the Linked list it takes linear time so, the Linked list is quite bit slower.\n• Operations like insertion and deletion in arrays take a lot of time. Whereas, the performance of these operations is faster in Linked lists.\n• Arrays are of fixed size and their size is static but Linked lists are dynamic and flexible and can expand and shrink their size."
+            }
+        ],
+        "operations": [
+            {
+                "id": "operation-insert",
+                "title": "insert",
+                "link": "#"
+            },
+            {
+                "id": "operation-size",
+                "title": "size",
+                "link": "#"
+            },
+            {
+                "id": "operation-empty",
+                "title": "empty",
+                "link": "#"
+            },
+            {
+                "id": "operation-value_at",
+                "title": "valueAt",
+                "link": "#"
+            },
+            {
+                "id": "operation-push_front",
+                "title": "pushFront",
+                "link": "#"
+            },
+            {
+                "id": "operation-push_back",
+                "title": "pushBack",
+                "link": "#"
+            },
+            {
+                "id": "operation-pop_front",
+                "title": "popFront",
+                "link": "#"
+            },
+            {
+                "id": "operation-pop_back",
+                "title": "popBack",
+                "link": "#"
+            },
+            {
+                "id": "operation-insert",
+                "title": "insert",
+                "link": "#"
+            },
+            {
+                "id": "operation-size",
+                "title": "size",
+                "link": "#"
+            },
+            {
+                "id": "operation-empty",
+                "title": "empty",
+                "link": "#"
+            },
+            {
+                "id": "operation-value_at",
+                "title": "valueAt",
+                "link": "#"
+            },
+            {
+                "id": "operation-push_front",
+                "title": "pushFront",
+                "link": "#"
+            },
+            {
+                "id": "operation-push_back",
+                "title": "pushBack",
+                "link": "#"
+            },
+            {
+                "id": "operation-pop_front",
+                "title": "popFront",
+                "link": "#"
+            },
+            {
+                "id": "operation-pop_back",
+                "title": "popBack",
+                "link": "#"
+            },
+            {
+                "id": "operation-pop_back",
+                "title": "popBack",
+                "link": "#"
+            }
+        ]
+    }
+]
